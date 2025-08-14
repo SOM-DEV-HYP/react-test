@@ -24,7 +24,7 @@ function App() {
           transform: `translate(${(mousePos.x - window.innerWidth/2)/30}px, ${(mousePos.y - window.innerHeight/2)/30}px)`
         }}
       >
-        Welcome Somnath!
+        Welcome Somnath Sahoo !!!
       </h1>
       <h2
         className="interactive-text"
