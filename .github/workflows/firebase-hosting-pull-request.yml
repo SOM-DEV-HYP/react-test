@@ -17,5 +17,5 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_HHMD_REACT }}
-          projectId: hhmd-react
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_HHMD_71554 }}
+          projectId: hhmd-71554
