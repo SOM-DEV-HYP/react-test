@@ -1,0 +1,9 @@
+/* .hero{padding-top:30px;padding-bottom:10px}
+.hero-title{font-size:120px;letter-spacing:18px;font-weight:800;margin:0}
+.hero-center img{max-width:420px;width:100%;display:block}
+.discount-blob{border-radius:50%;border:6px solid #eee;padding:36px;text-align:center;font-weight:700}
+@media(max-width:768px){
+.hero{padding:20px}
+.hero-title{font-size:48px;letter-spacing:6px}
+.hero-center img{max-width:260px}
+} */

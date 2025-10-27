@@ -1,0 +1,260 @@
+/* Import Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+.footer-section {
+  background-color: #f4f4f4;
+  padding-block: 60px;
+  padding-inline: 20px;
+  color: #00000099;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ---------- Layout ---------- */
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 4fr 2fr;
+  align-items: start;
+  gap: 60px;
+}
+
+/* ---------- Left (Logo + Description + Socials) ---------- */
+.footer-brand {
+  max-width: 300px;
+}
+
+.footer-logo {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-logo-img {
+  height: 30px;         /* same height as original BELLEWEST text */
+  width: auto;
+  object-fit: contain;
+  margin-left: -5px;
+}
+
+
+.footer-logo span {
+  color: #000;
+  font-weight: 800;
+}
+
+.footer-desc {
+  font-size: 14px;
+  margin: 15px 0 25px;
+  color: #00000099;
+  line-height: 1.6;
+}
+
+.footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  color: #00000099;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.footer-socials a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* ---------- Middle (Links Section) ---------- */
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.footer-links > div {
+  flex: 1;
+  min-width: 150px;
+}
+
+.footer-links h4 {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #000; /* headings black */
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+  color: #00000099;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #000;
+}
+
+/* ---------- Right (Subscribe Box) ---------- */
+.footer-subscribe {
+  max-width: 320px;
+}
+
+.footer-subscribe h4 {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #000; /* heading black */
+}
+
+.footer-subscribe p {
+  font-size: 14px;
+  color: #00000099;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.subscribe-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #999;
+  padding: 10px 12px;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.subscribe-box .mail-icon {
+  font-size: 18px;
+  margin-right: 8px;
+  color: #00000099;
+}
+
+.subscribe-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  background: transparent;
+  color: #00000099;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.subscribe-box input::placeholder {
+  color: #00000099;
+}
+
+/* ---------- Divider ---------- */
+.footer-divider {
+  border: none;
+  border-top: 1.5px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 40px 0 25px;
+  opacity: 1;
+}
+
+/* ---------- Bottom Section ---------- */
+.footer-bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer-payments img {
+  height: 28px;
+  margin-left: 10px;
+  object-fit: contain;
+  opacity: 0.8;
+  transition: 0.3s ease;
+}
+
+.footer-payments img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* ---------- Responsive Design ---------- */
+@media (max-width: 1200px) {
+  .footer-section {
+    padding-block: 50px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1.5fr 3fr 2fr;
+    gap: 50px;
+  }
+
+  .footer-links {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .footer-subscribe {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-section {
+    padding-block: 40px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    justify-content: center;
+  }
+
+  .footer-payments img {
+    margin: 0 5px;
+  }
+}

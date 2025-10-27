@@ -1,0 +1,244 @@
+.topbar {
+  background: #111;
+  color: #fff;
+  padding: 6px 0;
+  text-align: center;
+  font-size: 13px;
+}
+
+.nav-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  background: #fff;
+  padding: 0 50px;
+  box-sizing: border-box;
+  margin-left: -10px;
+  margin-right: 10px;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+.brand span {
+  font-weight: 400;
+}
+
+.nav-actions svg {
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.navbar-menu {
+  height: 55px;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+  
+}
+
+.nav-links li {
+  position: relative;
+  font-weight: 500;
+  font-size: 15px;
+  color: #fff;
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+.nav-links li:hover {
+  color: #c5a572;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* spacing between image and text */
+}
+
+.brand-logo {
+
+  width: 210PX;
+}
+
+.mega-menu {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: calc(65px + 65px);
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 60px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  /* height: 460px; */
+}
+
+.mega-left {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  max-width: 1000px;
+}
+
+.mega-col h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 10px 0;
+}
+
+.submenu-item {
+  display: block;
+  color: #444;
+  text-decoration: none;
+  margin: 6px 0;
+  font-size: 14px;
+  transition: color 0.15s;
+}
+.submenu-item:hover {
+  color: #a67c52;
+}
+
+.category-block {
+  margin-bottom: 20px;
+}
+
+.mega-right {
+  display: flex;
+  gap: 24px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-left: 60px;
+}
+
+.mega-img img {
+  width: 260px;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+  border-radius: 3px;
+}
+
+.mega-img p {
+  margin-top: 10px;
+  color: #666;
+  font-size: 14px;
+}
+/* ===== Dropdown Arrow Styling ===== */
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.dropdown-icon {
+  font-size: 20px;
+  transition: transform 0.2s ease;
+}
+
+/* Rotate the arrow when hovered */
+.has-submenu:hover .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+/* Optional: make the text and icon a little darker on hover */
+.navbar-menu .nav-links li:hover .menu-item {
+  color: #e91e63; /* or your theme accent color */
+}
+
+/* HELP small dropdown styling */
+.help-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0; /* align right under HELP */
+  background: #fff;
+  color: #444;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 12px 20px;
+  /* border-radius: 4px; */
+  min-width: 180px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+}
+
+.help-links .submenu-item {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.help-links .submenu-item:hover {
+  color: #c5a572;
+}
+
+/* Hide mega-right for HELP */
+.help-dropdown .mega-right {
+  display: none;
+}
+
+/* Remove underline and inherit your menu style */
+.menu-item {
+  text-decoration: none;   /* Remove underline */
+  color: inherit;          /* Keep the same color as span text */
+  cursor: pointer;
+}
+
+/* Optional: keep hover effect if you have any */
+.menu-item:hover {
+  color: #ff4081; /* or whatever your hover color is */
+  text-decoration: none;  /* ensure no underline on hover */
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Import Montserrat font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Apply Montserrat to your header and navbar text */
+.site-header,
+.navbar-menu .nav-links .menu-item,
+.nav-main .brand,
+.nav-main .nav-actions {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Optional: make menu items bold or medium weight */
+.navbar-menu .nav-links .menu-item {
+    font-weight: 500;  /* 400-normal, 500-medium, 600-semi-bold, 700-bold */
+}
+
+/* Submenu text */
+.mega-menu,
+.mega-menu a,
+.help-dropdown {
+    font-family: 'Montserrat', sans-serif;
+}

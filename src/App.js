@@ -1,42 +1,44 @@
-import React, { useEffect, useState } from "react";
-import "./App.css";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header/Header';
+import Hero from './components/Hero/Hero';
+import Off from './components/Off/Off';
+import Explore from './components/Explore/Explore';
+import NewTrend from './components/NewTrend/NewTrend';
+import StyleVibes from './components/StyleVibes/StyleVibes';
+import NewArrival from './components/NewArrival/NewArrival';
+import Footer from './components/Footer/Footer';
+import Privacy from './components/Privacy/Privacy'; 
+import Faq from './components/Faq/Faq'; 
+import './App.css';
 
-function App() {
-  const [time, setTime] = useState(new Date());
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-
-  // Update time every second
-  useEffect(() => {
-    const interval = setInterval(() => setTime(new Date()), 1000);
-    return () => clearInterval(interval);
-  }, []);
-
-  // Track mouse movement
-  const handleMouseMove = (e) => {
-    setMousePos({ x: e.clientX, y: e.clientY });
-  };
-
+export default function App() {
   return (
-    <div className="App" onMouseMove={handleMouseMove}>
-      <h1
-        className="interactive-text"
-        style={{
-          transform: `translate(${(mousePos.x - window.innerWidth/2)/30}px, ${(mousePos.y - window.innerHeight/2)/30}px)`
-        }}
-      >
-        Welcome Somnath Sahoo !!!
-      </h1>
-      <h2
-        className="interactive-text"
-        style={{
-          transform: `translate(${(mousePos.x - window.innerWidth/2)/50}px, ${(mousePos.y - window.innerHeight/2)/50}px)`
-        }}
-      >
-        {time.toLocaleTimeString()}
-      </h2>
-      <p className="sub-text">We're thrilled to have you here 🚀</p>
-    </div>
+    <Router>
+      <div className="site-root">
+        <Header />  {/* Always visible */}
+
+        <main>
+          <Routes>
+            <Route path="/" element={
+              <>
+               
+                <NewTrend />
+                <Off />
+                <Explore />
+                 <Hero />
+              </>
+            } />
+
+            <Route path="/style-vibes" element={<StyleVibes />} />
+            <Route path="/new-arrivals" element={<NewArrival />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/faq" element={<Faq />} />
+          </Routes>
+        </main>
+
+        <Footer />  {/* Always visible */}
+      </div>
+    </Router>
   );
 }
-
-export default App;
