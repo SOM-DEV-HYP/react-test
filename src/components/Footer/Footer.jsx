@@ -1,8 +1,8 @@
 import React from 'react';
 import './Footer.css';
 import { FaTwitter, FaFacebookF, FaInstagram, FaGithub } from 'react-icons/fa';
-import { FiMail } from 'react-icons/fi'; // Import mail icon
-import Logo from './logo.png'; // replace with your file name
+import { FiMail } from 'react-icons/fi';
+import Logo from './logo.png'; 
 
 const Footer = () => {
   return (

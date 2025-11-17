@@ -54,16 +54,18 @@ export default function FeaturesSection() {
       </div>
 
       <style>{`
-        /* ---------- Wrapper (for consistent left/right spacing) ---------- */
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Montserrat:wght@400&display=swap');
+
+        /* ---------- Wrapper ---------- */
         .features-wrapper {
           background-color: #fff;
-          padding-block: 60px;
-          padding-inline: 20px; /* same as StyleVibes & Footer */
+          padding-block: 40px;
+          padding-inline: 20px;
           font-family: 'Poppins', sans-serif;
         }
 
         .features-container {
-          max-width: 1400px; /* align with other sections */
+          max-width: 1400px;
           margin: 0 auto;
           width: 100%;
           box-sizing: border-box;
@@ -93,19 +95,26 @@ export default function FeaturesSection() {
           align-items: center;
         }
 
+        /* ---------- Title (Font Family Updated Only) ---------- */
         .feature-title {
-          font-size: 17px;
-          font-weight: 600;
+          font-family: 'Libre Baskerville', serif;
+          font-weight: 700;
           color: #1a1a1a;
           margin-bottom: 12px;
           margin-top: 0;
+          font-size: 17px;
         }
 
+        /* ---------- Description (Font Family Updated Only) ---------- */
         .feature-description {
-          font-size: 13px;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 400;
+          font-style: normal;
           color: #666;
           line-height: 1.6;
           margin: 0;
+          font-size: 13px;
+          text-align: center;
         }
 
         /* ---------- Responsive ---------- */

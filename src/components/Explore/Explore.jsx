@@ -7,59 +7,73 @@ export default function PromoBanner() {
   return (
     <div className="promo-wrapper">
       <div className="promo-container">
-        <img 
-          src={productImg1}
-          alt="Left product"
-          className="promo-img-single"
-        />
-        
+        <div className="promo-img-box">
+          <img
+            src={productImg1}
+            alt="Left product"
+            className="promo-img-single"
+          />
+        </div>
+
         <div className="promo-content">
           <h2 className="promo-title">Get 50% Off</h2>
           <p className="promo-subtitle">for all new product purchases</p>
           <p className="promo-min">min. purchase RS. 95,000</p>
           <button className="promo-btn">SHOP NOW</button>
         </div>
-        
-        <img 
-          src={productImg}
-          alt="Right product"
-          className="promo-img-single"
-        />
+
+        <div className="promo-img-box">
+          <img
+            src={productImg}
+            alt="Right product"
+            className="promo-img-single"
+          />
+        </div>
       </div>
 
       <style>{`
-        /* ---------- Wrapper (consistent with other sections) ---------- */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+        /* ---------- Wrapper ---------- */
         .promo-wrapper {
           background-color: #fff;
-          padding-block: 60px;
-          padding-inline: 20px; /* same as StyleVibes & Footer */
-          font-family: 'Poppins', sans-serif;
+          padding-block: 40px;
+          padding-inline: 20px;
+          font-family: 'Montserrat', sans-serif;
         }
 
         .promo-container {
-          max-width: 1400px; /* same as others */
+          max-width: 1400px;
           margin: 0 auto;
           display: flex;
           align-items: center;
           justify-content: center;
-          gap: 80px;
-          background: #f0f0f0;
+          gap: 60px;
+          background: #f5f5f5;
           padding: 60px 40px;
-          border-radius: 0;
+          flex-wrap: wrap;
           box-sizing: border-box;
         }
 
+        .promo-img-box {
+          flex: 1 1 250px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          max-width: 400px;
+        }
+
         .promo-img-single {
-          width: 585px;
-          height: 330px;
-          object-fit: cover;
-          border-radius: 0;
+          width: 100%;
+          height: auto;
+          max-height: 320px;
+          object-fit: contain;
         }
 
         .promo-content {
+          flex: 1 1 300px;
           text-align: center;
-          flex: 0 0 auto;
-          padding: 0 40px;
+          min-width: 260px;
         }
 
         .promo-title {
@@ -73,90 +87,72 @@ export default function PromoBanner() {
           font-size: 16px;
           color: #333;
           margin: 0 0 5px 0;
+          font-weight: 500;
         }
 
         .promo-min {
           font-size: 14px;
           color: #666;
           margin: 0 0 30px 0;
+          font-weight: 400;
         }
 
         .promo-btn {
           background: #fff;
-          color: #000;
-          border: 2px solid #000;
+          color: #0a0a0aff;
+          border: none; /* removed border */
           padding: 12px 40px;
           font-size: 14px;
           font-weight: 600;
           cursor: pointer;
           transition: all 0.3s ease;
           letter-spacing: 1px;
+          border-radius: 4px;
         }
 
         .promo-btn:hover {
-          background: #000;
+          background: #333;
           color: #fff;
         }
 
         /* ---------- Responsive ---------- */
         @media (max-width: 1200px) {
-          .promo-wrapper {
-            padding-block: 50px;
-          }
-
           .promo-container {
-            gap: 50px;
+            gap: 40px;
+            padding: 50px 30px;
           }
-
-          .promo-img-single {
-            width: 240px;
-            height: 260px;
-          }
-
           .promo-title {
             font-size: 40px;
+          }
+          .promo-img-single {
+            max-height: 280px;
           }
         }
 
         @media (max-width: 992px) {
           .promo-container {
             flex-direction: column;
-            padding: 40px 30px;
+            text-align: center;
             gap: 30px;
           }
-
+          .promo-img-box {
+            max-width: 300px;
+          }
           .promo-img-single {
-            width: 220px;
-            height: 240px;
+            max-height: 250px;
           }
         }
 
         @media (max-width: 768px) {
-          .promo-wrapper {
-            padding-block: 40px;
-          }
-
           .promo-container {
-            padding: 30px 20px;
+            padding: 40px 20px;
           }
-
-          .promo-img-single {
-            width: 180px;
-            height: 200px;
-          }
-
           .promo-title {
             font-size: 36px;
           }
-
           .promo-subtitle {
             font-size: 14px;
           }
-
-          .promo-min {
-            font-size: 12px;
-          }
-
           .promo-btn {
             padding: 10px 30px;
             font-size: 13px;
@@ -164,17 +160,14 @@ export default function PromoBanner() {
         }
 
         @media (max-width: 576px) {
+          .promo-img-box {
+            max-width: 240px;
+          }
           .promo-img-single {
-            width: 150px;
-            height: 170px;
+            max-height: 200px;
           }
-
           .promo-title {
-            font-size: 32px;
-          }
-
-          .promo-content {
-            padding: 0 15px;
+            font-size: 30px;
           }
         }
       `}</style>
